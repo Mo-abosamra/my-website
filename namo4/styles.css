@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Logo with image */
+/* Logo button (blends with header) */
+.logo-button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 0; /* Remove padding so it blends */
+  background: transparent; /* same as header */
+  display: inline-block;
+}
+
+.logo-button span {
+  font-weight: bold;
+}
+
+.logo-white {
+  color: white;
+}
+
+.logo-orange {
+  color: #f39c12;
+}
+
+.logo-button:hover {
+  opacity: 0.8; /* subtle hover effect */
+}
+
+
+/* Header */
+header {
+  background: #1f2a44;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom: 2px solid #f39c12;
+}
+
+/* Hamburger button (mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero section */
+/* Hero slider full section */
+.hero-swiper {
+  position: relative;
+  width: 100%;
+  height: 75vh;  /* same height as before */
+  overflow: hidden;
+}
+
+/* Each slide fills area */
+.hero-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay on images for text readability */
+.hero-swiper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Centered text */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA button */
+.hero-overlay .cta {
+  background: #f39c12;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.hero-overlay .cta:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+/* Navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  z-index: 3;
+}
+
+/* Pagination bullets */
+.swiper-pagination-bullet {
+  background: #f39c12;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.cta {
+  display: inline-block;
+  background: #f39c12;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.cta:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+/* Features section */
+.features ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.features li {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* CTA block */
+.cta-block {
+  text-align: center;
+  padding: 2rem;
+  background: #2c3260;
+  color: white;
+}
+.cta-block h2 {
+  margin-bottom: 1rem;
+}
+
+/* Contact form */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  background: #1f2a44;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #f39c12;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1f2a44;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #1f2a44;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  nav.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
