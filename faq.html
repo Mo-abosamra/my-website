@@ -1,10 +1,98 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GalvaTube Buildings FAQ</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Accordion styles, keeping it simple to match existing theme */
+    .faq-category {
+      margin: 20px auto;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .category-header {
+      background: #f4f4f4;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #eee;
+    }
+
+    .accordion-title {
+      padding: 12px 20px;
+      cursor: pointer;
+      position: relative;
+      background: #fff;
+    }
+
+    .accordion-title:hover {
+      background: #f9f9f9;
+    }
+
+    .accordion-title::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-weight: bold;
+    }
+
+    .accordion-title.active::after {
+      content: '-';
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #fafafa;
+      padding: 0 20px;
+    }
+
+    .accordion-content p {
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .testimonial {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff7e6;
+      padding: 15px 20px;
+      border-left: 4px solid #ffa500;
+      font-style: italic;
+    }
+
+    .contact-cta {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .contact-cta button {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .contact-cta button:hover {
+      background: #0066cc;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,22 +113,136 @@
 <section>
   <h1>Frequently Asked Questions</h1>
 
-  <h2>What is tubular galvanized steel?</h2>
-  <p>It’s strong, lightweight, and rust-resistant steel tubing that provides durable structures at affordable prices, perfect for garages, barns, workshops, and more.</p>
+  <p>We know buying a steel building is a big decision. Here are the most common questions our customers ask us about GalvaTube Buildings, from materials and installation to financing and warranties.</p>
 
-  <h2>Do you offer installation?</h2>
-  <p>Yes! Every GalvaTube Building includes professional delivery and installation for complete peace of mind.</p>
+  <!-- General -->
+  <div class="faq-category">
+    <div class="category-header">🏗️ General</div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title">What is tubular galvanized steel?</div>
+        <div class="accordion-content">
+          <p>It’s strong, lightweight, and rust-resistant steel tubing that provides durable structures at affordable prices, perfect for garages, barns, workshops, and more.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">Do you serve all 50 states?</div>
+        <div class="accordion-content">
+          <p>Yes, we ship and install buildings across the United States.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">How long does delivery take?</div>
+        <div class="accordion-content">
+          <p>Delivery typically takes 4–8 weeks depending on your location and building specifications.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">Do you offer installation?</div>
+        <div class="accordion-content">
+          <p>Yes! Every GalvaTube Building includes professional delivery and installation for complete peace of mind.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>Can I customize my building?</h2>
-  <p>Absolutely! Choose your size, color, roof style, doors, and windows to match your exact needs.</p>
+  <!-- Customization -->
+  <div class="faq-category">
+    <div class="category-header">🎨 Customization</div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title">Can I customize my building?</div>
+        <div class="accordion-content">
+          <p>Absolutely! Choose your size, color, roof style, doors, and windows to match your exact needs.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">Can I upgrade later (add doors, extend size, etc.)?</div>
+        <div class="accordion-content">
+          <p>Yes, most buildings are designed to be modular, allowing for future upgrades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>Do you offer financing?</h2>
-  <p>Yes, we provide flexible financing and rent-to-own options so you can get your building today and pay over time.</p>
+  <!-- Installation & Warranty -->
+  <div class="faq-category">
+    <div class="category-header">🔧 Installation & Warranty</div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title">Do I need a permit for my building?</div>
+        <div class="accordion-content">
+          <p>Permit requirements vary by location. Our team can assist with local regulations.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">What kind of warranty do you offer?</div>
+        <div class="accordion-content">
+          <p>All buildings come with a 20-year structural warranty covering material defects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Financing & Payment -->
+  <div class="faq-category">
+    <div class="category-header">💳 Financing & Payment</div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-title">Do you offer financing?</div>
+        <div class="accordion-content">
+          <p>Yes, we provide flexible financing and rent-to-own options so you can get your building today and pay over time.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">What payment options do you accept?</div>
+        <div class="accordion-content">
+          <p>We accept credit cards, bank transfers, and offer financing plans through our partners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    “My garage was installed in 3 weeks, and the team made financing easy!” – John D.
+  </div>
+<div class="testimonial">
+    “Professional installation and great customer support. Highly recommend!” – Mike R.
+  </div>
+  <div class="testimonial">
+    “The customization options made it easy to get exactly what we wanted.” – Emily T.
+  </div>
+  <div class="testimonial">
+    “Fast delivery and sturdy construction. Couldn’t be happier with our new shop!” – Robert K.
+  </div>
+  <div class="testimonial">
+    “Fantastic experience from start to finish. The team handled everything smoothly.” – Laura B.
+  </div>
+
+  <div class="contact-cta">
+    <p>Still have questions? Our team is happy to help.</p>
+    <button onclick="window.location.href='contact.html'">Contact Us</button>
+  </div>
 </section>
 
 <footer>
   <p>© 2025 GalvaTube Buildings. All Rights Reserved.</p>
 </footer>
+
+<script>
+  const titles = document.querySelectorAll('.accordion-title');
+  titles.forEach(title => {
+    title.addEventListener('click', () => {
+      title.classList.toggle('active');
+      const content = title.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -5,6 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GalvaTube Buildings - Financing</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra financing styles (keeps your theme intact) */
+    .options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card h3 {
+      color: #1f2a44;
+      margin-bottom: 0.5rem;
+    }
+    .example-box {
+      background: #fff3cd;
+      padding: 1rem;
+      border: 1px solid #ffeeba;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+    .cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta a {
+      display: inline-block;
+      background: #f39c12;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta a:hover {
+      background: #d35400;
+      transform: scale(1.05);
+    }
+    .faq h3 {
+      margin-top: 1rem;
+      color: #1f2a44;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,15 +75,59 @@
   <h1>Financing & Pricing</h1>
   <p>Your dream building should fit your budget. GalvaTube Buildings offers flexible financing options to make it possible.</p>
 
-  <h2>✔ Payment Options</h2>
+  <!-- Financing Options Grid -->
+  <div class="options">
+    <div class="card">
+      <h3>💳 Low Down Payments</h3>
+      <p>Start your project with a small upfront investment.</p>
+    </div>
+    <div class="card">
+      <h3>📅 Monthly Financing</h3>
+      <p>Affordable plans tailored to your budget.</p>
+    </div>
+    <div class="card">
+      <h3>🏡 Rent-to-Own</h3>
+      <p>No credit check required. Own your building over time.</p>
+    </div>
+    <div class="card">
+      <h3>✔ Free Quotes</h3>
+      <p>Transparent pricing with no hidden fees. Delivery & installation included.</p>
+    </div>
+  </div>
+
+  <!-- Example Box -->
+  <div class="example-box">
+    <h3>Example Payment</h3>
+    <p>A 24x30 garage priced at <strong>$10,000</strong> could be as low as <strong>$185/month</strong> with approved credit.</p>
+  </div>
+
+  <!-- Why Finance -->
+  <h2>Why Finance with GalvaTube?</h2>
   <ul>
-    <li>Low down payments</li>
-    <li>Monthly financing plans</li>
-    <li>Rent-to-own options</li>
+    <li>✅ Fast approval process</li>
+    <li>✅ Competitive rates with approved credit</li>
+    <li>✅ No early payoff penalties</li>
+    <li>✅ Options for homeowners, farmers, and small businesses</li>
   </ul>
 
-  <h2>✔ Free Quotes</h2>
-  <p>No hidden fees. Every quote includes materials, delivery, and installation.</p>
+  <!-- CTA -->
+  <div class="cta">
+    <a href="contact.html">Request Financing</a>
+    <a href="contact.html" style="margin-left: 10px; background:#28a745;">Get Free Quote</a>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <h3>Do I need perfect credit?</h3>
+    <p>No, we have options for all credit types including rent-to-own.</p>
+
+    <h3>How fast is approval?</h3>
+    <p>Most applications are approved within 24 hours.</p>
+
+    <h3>Can I pay off early?</h3>
+    <p>Yes! There are no penalties for paying off your balance early.</p>
+  </div>
 </section>
 
 <footer>

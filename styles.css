@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   line-height: 1.6;
   background: #f8f9fa;
   color: #333;
@@ -89,7 +89,9 @@ nav a.active {
 .hero-swiper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background-color: #000; /* optional: fills empty space */
 }
 
 /* Dark overlay on images for text readability */
@@ -104,7 +106,7 @@ nav a.active {
 /* Centered text */
 .hero-overlay {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -218,6 +220,281 @@ footer {
   color: white;
   margin-top: 2rem;
 }
+
+/* Only affect h2 in the products section */
+.products h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.products h2 img {
+  margin-left: 350px;
+  width: 350px;   /* adjust as needed */
+  height: 250px;
+  object-fit: contain;
+}
+
+/* -----------------------
+   About page scoped styles
+   ----------------------- */
+.about-page {
+  padding: 3rem 0;
+  color: #222;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-hero .about-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-hero .lead {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 60ch;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  display: block;
+  object-fit: cover;
+}
+
+/* Story + mission */
+.story-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.story-mission h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Values */
+.core-values {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.values-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.values-list li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: #f7f8fa;
+}
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  color: #f39c12; /* brand orange */
+}
+
+/* Credibility / stats */
+.credibility {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cred-item h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #1f2a44;
+}
+
+.cred-item p {
+  margin: 0;
+  color: #666;
+}
+
+/* Team block */
+.team {
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.team-photo img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.team-copy p {
+  margin-bottom: 1rem;
+}
+
+/* Final CTA */
+.final-cta {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(31,42,68,0.95), rgba(44,50,96,0.95));
+  color: white;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.final-cta h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.final-cta p {
+  margin: 0 0 1rem 0;
+}
+
+/* Buttons (ensure they match main site) */
+.about-page .cta {
+  display: inline-block;
+  background: #f39c12;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.about-page .cta:hover {
+  transform: translateY(-2px);
+  background: #d35400;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .about-hero { grid-template-columns: 1fr; }
+  .story-mission { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .credibility { flex-direction: column; gap: 0.8rem; align-items: center; }
+}
+
+/* -----------------------
+   Home page additions
+   ----------------------- */
+
+/* How It Works Section */
+.how-it-works {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.how-it-works h2 {
+  margin-bottom: 30px;
+  color: #1f2a44;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.step {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.step h3 {
+  margin-bottom: 10px;
+  color: #1f2a44;
+}
+
+/* Testimonials */
+.testimonials {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.testimonials h2 {
+  margin-bottom: 30px;
+  color: #1f2a44;
+}
+.testimonial {
+  background: #fff7e6;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #f39c12;
+  font-style: italic;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+/* Quick CTA */
+.quick-cta {
+  background: #1f2a44;
+  color: white;
+  text-align: center;
+  padding: 3rem 20px;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+.quick-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.quick-cta p {
+  font-size: 1.2rem;
+}
+.quick-cta a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #f39c12;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.quick-cta a:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+/* Hero overlay adjustment for new layout */
+.hero-overlay {
+  top: 60%;
+  max-width: 90%;
+  padding: 0 20px;
+}
+
 
 /* Responsive nav */
 @media (max-width: 768px) {
